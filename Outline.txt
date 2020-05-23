@@ -1,18 +1,24 @@
 Clone
-  git clone
+  git clone LINK
 
 Master = Production
 Checkout New Branch
-  git checkout -b NAME_OF_BRANCH
+  git checkout [-b] NAME_OF_BRANCH
 
-Push
+See branches
+  git branch -vv
+
+Push New Branch
   git push [-u] origin NAME_OF_BRANCH
 
 Make Changes, Push
+  git add FILE
+  git commit -m "Descriptive message"
   git push origin NAME_OF_BRANCH
 
-Fetch, Rebase, Merge, Pull
+Fetch, Status, Rebase, Merge, Pull
   git fetch --all -p
+  git status
   git rebase origin/master
   git merge TARGET_INTO_CURRENT
   Don't Pull
@@ -41,7 +47,7 @@ Rewriting History
       drop
 
 Amend commits
-  git amend
+  git commit --amend --no-edit
     Adds your changes into your last commit. Only do if you haven't pushed.
 
 Force Push
@@ -49,4 +55,3 @@ Force Push
     Force your current commits into origin
     NEVER force push master (unless you really know what you're doing)
     Hazardous if doing at the same time as rewriting commits
-    
