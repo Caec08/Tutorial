@@ -1,0 +1,52 @@
+Clone
+  git clone
+
+Master = Production
+Checkout New Branch
+  git checkout -b NAME_OF_BRANCH
+
+Push
+  git push [-u] origin NAME_OF_BRANCH
+
+Make Changes, Push
+  git push origin NAME_OF_BRANCH
+
+Fetch, Rebase, Merge, Pull
+  git fetch --all -p
+  git rebase origin/master
+  git merge TARGET_INTO_CURRENT
+  Don't Pull
+
+Merge Conflict
+  2 different commits on the same line
+  Settle first by rebasing onto master in your branch
+    git rebase origin/master
+  Once done, then merge your branch into master
+    git checkout master
+    git fetch
+    git rebase origin/master
+    git merge NAME_OF_BRANCH
+    git push origin master
+
+TL;DR Always do shit in your branch before ever touching master
+
+Extra Fun stuff:
+
+Rewriting History
+  git rebase -i HEAD~n
+    n = number of previous commits (1 = current)
+    Lets you edit your commits
+      squash/fixup
+      rewrite
+      drop
+
+Amend commits
+  git amend
+    Adds your changes into your last commit. Only do if you haven't pushed.
+
+Force Push
+  git push -f
+    Force your current commits into origin
+    NEVER force push master (unless you really know what you're doing)
+    Hazardous if doing at the same time as rewriting commits
+    
