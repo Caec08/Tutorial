@@ -1,7 +1,7 @@
 # This is Hello World!
 
 def helloWorld():
-    print("Hello World!")
+    print("World, Hello!")
 
 if __name__ == '__main__':
     helloWorld()
