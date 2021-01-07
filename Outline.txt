@@ -21,7 +21,10 @@ Fetch, Status, Rebase, Merge, Pull
   git status
   git rebase origin/master
   git merge TARGET_INTO_CURRENT
-  Don't Pull
+
+  git pull is a combo of fetch and merge, in my experience causes more issues
+    instead, fetch, rebase, and merge when ready
+    Rebase is much better when working with multiple people, as there may be commits in master you are missing, so you want to put bring in those changes before you put yours on top.
 
 Merge Conflict
   2 different commits on the same line
