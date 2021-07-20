@@ -36,6 +36,8 @@ Merge Conflict
     git rebase origin/master
     git merge NAME_OF_BRANCH
     git push origin master
+  Example
+    Change some text in Text.txt, then switch to mergeConflict and rebase/merge
 
 TL;DR Always do shit in your branch before ever touching master
 
