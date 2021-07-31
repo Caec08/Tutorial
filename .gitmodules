@@ -1,0 +1,3 @@
+[submodule "SubmoduleTutorial"]
+	path = SubmoduleTutorial
+	url = https://github.com/Caec08/SubmoduleTutorial.git
